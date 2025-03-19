@@ -5,9 +5,10 @@ from interfaz_control.comunicacion_serial import ComunicacionSerial
 
 class CarGestureControl:
     def __init__(self):
-        self.cap = cv2.VideoCapture(0)
-        self.cap.set(3, 640) #resolucion pantalla
-        self.cap.set(4, 480)
+        self.cap = cv2.VideoCapture(0, cv2.CAP_DSHOW) #camara
+        self.cap.set(cv2.CAP_PROP_FRAME_WIDTH, 640) #resolucion pantalla
+        self.cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 480)
+        self.cap.set(cv2.CAP_PROP_BUFFERSIZE, 1)
         self.hand_gesture = GestureDetector()
         self.communication = ComunicacionSerial()
 
