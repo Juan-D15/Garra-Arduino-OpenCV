@@ -18,7 +18,6 @@ class CarGestureControl:
             ret, frame = self.cap.read()
             command, draw_frame = self.hand_gesture.gesture_interpretation(frame)
             self.communication.sending_data(command + "\n" )
-
             cv2.imshow('Brazo control', draw_frame)
             if t == 27:
                 break
