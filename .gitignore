@@ -1,0 +1,38 @@
+# Ignorar entorno virtual
+venv/
+.venv/
+env/
+.env/
+
+# Archivos generados por Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Archivos de entorno
+*.env
+.env.*
+
+# Archivos de log
+*.log
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+
+# Configuración de editores
+.vscode/
+.idea/
+
+# Herramientas de pruebas y cobertura
+.pytest_cache/
+coverage/
+coverage.xml
+htmlcov/
+.tox/
+nosetests.xml
+
+# Archivos de paquetes
+dist/
+build/
+*.egg-info/
